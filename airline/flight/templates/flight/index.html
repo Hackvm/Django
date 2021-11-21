@@ -1,0 +1,14 @@
+{ % extends  "flight/layout.html" %}
+
+ {%  block body %}
+    <h1>Flights</h1>
+    <ul>
+        {% for fligh in flight %}
+            <li>
+                <a href="{% url 'flight' fligh.id %}">
+                    Flight {{ fligh.id}}: {{fligh.origin}} to {{fligh.destination}}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+ {% endblock %}
