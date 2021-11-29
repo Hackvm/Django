@@ -1,0 +1,15 @@
+{% extends "Market/layout.html" %}
+
+{% block body %}
+<h1>Vegitable</h1>
+<ul>
+    {% for vegi in Vegitable  %}
+    <li>
+        {{vegi.Vegitable.Vegitable}} : {{vegi.Vegitable.Price}}
+    </li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'index' %}">Back to the List of Index</a>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "Market/layout.html" %}
+
+{% block body %}
+
+    <h1>Fruits</h1>
+    <ul>
+        {% for fruit in user  %}
+        <li>
+            {{fruit.Fruit.Fruit}} : {{fruit.Fruit.Price}}  
+        </li>
+        {% endfor %}
+        
+    </ul>
+    <h2>trial</h2>
+    
+    <h1>Add Fruits</h1>
+    <form action="{% url 'book' fruit.id %}" method="post">
+        {% csrf_token %}
+        <select name="fruit">
+            {% for fru in fruits %}
+                <option value="{{ fru.id }}">{{ fru.Fruit }}:{{fru.Price}}</option>
+            {% endfor %}
+        </select>
+        <input type="submit">
+    </form>
+    <a href="{% url 'index' %}">Back to the List of Index</a>
+
+
+{% endblock %}

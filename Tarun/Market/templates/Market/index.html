@@ -1,0 +1,54 @@
+{% extends "Market/layout.html" %}
+
+{% block body %}
+    <h1>The Data Stored In the Data Base</h1>
+    <h2>Fruits</h2>
+    <ul>
+        {% for Fruit in fruits %}
+            <li>
+               {{ Fruit.Fruit }} : {{ Fruit.Price }}
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'user' %}">Booking for Fruits</a>
+
+    <h2>Vegitable</h2>
+    <ul>
+        {% for Vegitable in vegitable %}
+            <li>
+                    {{ Vegitable.Vegitable }} : {{ Vegitable.Price }}
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'Vegitable' %}">Booking for Vegitables</a>
+    <h2>Lentils</h2>
+    <ul>
+        {% for Lentil in lentil %}
+            <li>
+                {{ Lentil.Lentil }} : {{ Lentil.Price }}
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'Lentils' %}">Booking for Lentils</a>
+
+    <h2>Rice</h2>
+    <ul>
+        {% for Rice in rice %}
+            <li>
+                {{ Rice.rice }} : {{ Rice.Price }}
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'rice' %}">Booking for Rice</a>
+
+    <h2>Grocessory</h2>
+    <ul>
+        {% for Grocessory in grocessory %}
+            <li>
+                {{ Grocessory.grocessory }} : {{ Grocessory.Price }}
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'grocessory' %}">Booking for grocessory</a>
+
+{% endblock %}

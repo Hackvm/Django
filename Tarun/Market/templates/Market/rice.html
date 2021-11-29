@@ -1,0 +1,13 @@
+{% extends "Market/layout.html" %}
+
+{% block body %}
+<h1>Rice</h1>
+<ul>
+    {% for rice in Rice %}
+        <li>
+            {{rice.rice.rice}} : {{rice.rice.Price}}
+        </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'index' %}">Back to the List of Index</a>
+{% endblock %}

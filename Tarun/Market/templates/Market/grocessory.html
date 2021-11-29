@@ -1,0 +1,13 @@
+{% extends "Market/layout.html" %}
+
+{% block body %}
+<h1>Grocessory</h1>
+<ul>
+    {% for gocessory in Grocessory %}
+        <li>
+            {{gocessory.Grocessory.grocessory}} : {{gocessory.Grocessory.Price}}
+        </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'index' %}">Back to the List of Index</a>
+{% endblock %}

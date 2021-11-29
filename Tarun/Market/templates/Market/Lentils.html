@@ -1,0 +1,13 @@
+{% extends "Market/layout.html" %}
+
+{% block body %}
+<h1>Lentils</h1>
+<ul>
+    {% for lentil in Lentils %}
+        <li>
+            {{lentil.lentil.Lentil}} : {{lentil.lentil.Price}}
+        </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'index' %}">Back to the List of Index</a>
+{% endblock %}
