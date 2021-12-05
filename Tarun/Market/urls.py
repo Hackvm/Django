@@ -7,7 +7,6 @@ urlpatterns = [
     path("Vegitable",views.Vegitable,name="Vegitable"),
     path("rice",views.rice,name="rice"),
     path("Lentils",views.Lentils,name="Lentils"),
-    path("grocessory",views.grocessory,name="grocessory"),
-    path("book",views.book,name="book")
+    path("grocessory",views.grocessory,name="grocessory")
 
 ]

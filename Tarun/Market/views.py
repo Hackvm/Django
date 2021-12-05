@@ -39,9 +39,5 @@ def user(request):
     })
     
 
-def book(request,Fruit_id):
-    if request.method == "POST":
-        uuser = Fruits.objects.get(Fruit_id)
-        fruit = UserFruits.objects.get(pk=int(request.POST["fruit"]))
-        fruit.Fruits.add(uuser)
-        return HttpResponceRedirect(reverse("user",args=(Fruits.id,)))
+
+        

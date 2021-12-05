@@ -14,9 +14,9 @@
     <h2>trial</h2>
     
     <h1>Add Fruits</h1>
-    <form action="{% url 'book' fruit.id %}" method="post">
+    <form >
         {% csrf_token %}
-        <select name="fruit">
+        <select>
             {% for fru in fruits %}
                 <option value="{{ fru.id }}">{{ fru.Fruit }}:{{fru.Price}}</option>
             {% endfor %}
